@@ -1,0 +1,25 @@
+{
+  "name": "@Wise-Edge-LR/web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:a11y": "playwright test"
+  },
+  "dependencies": {
+    "next": "15.x",
+    "react": "19.x",
+    "react-dom": "19.x"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.x",
+    "@playwright/test": "1.x",
+    "@types/node": "22.x",
+    "@types/react": "19.x",
+    "@types/react-dom": "19.x",
+    "typescript": "5.x",
+    "vitest": "2.x"
+  }
+}

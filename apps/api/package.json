@@ -1,0 +1,28 @@
+{
+  "name": "@Wise-Edge-LR/api",
+  "private": true,
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.x",
+    "@nestjs/core": "11.x",
+    "@nestjs/platform-express": "11.x",
+    "reflect-metadata": "0.2.x",
+    "rxjs": "7.x",
+    "pg": "8.x",
+    "pdf-parse": "1.x"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "11.x",
+    "@types/multer": "1.x",
+    "@types/node": "22.x",
+    "@types/pdf-parse": "1.x",
+    "@types/pg": "8.x",
+    "typescript": "5.x",
+    "vitest": "2.x"
+  }
+}

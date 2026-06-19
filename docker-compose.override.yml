@@ -1,0 +1,19 @@
+# Wise-Edge-LR — dev/staging override (env-init)
+# 베이스 docker-compose.yml(postgres+redis) 위에 dev 편의 설정을 덧입힌다.
+# RAG 벡터검색을 위해 postgres → pgvector 이미지로 교체. 실행: docker compose up -d (override 자동 병합)
+services:
+  postgres:
+    image: pgvector/pgvector:pg17        # pgvector 확장 포함 (PRD: 벡터DB)
+    env_file:
+      - .env.dev
+    # 최초 1회: psql 로 CREATE EXTENSION IF NOT EXISTS vector;
+  redis:
+    env_file:
+      - .env.dev
+  # --- 온프레미스 LLM 런타임 (선택, PRD §7) ---
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   ports: ["11434:11434"]
+  #   volumes: ["ollama:/root/.ollama"]
+# volumes:
+#   ollama:
